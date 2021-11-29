@@ -44,7 +44,7 @@ exports.addProducts = async (req, res) => {
   await database.update("carts", id, cart);
   res.json({
     status: "ok",
-    message: `productos   agregado correctamente`,
+    message: `productos agregado correctamente`,
   });
 };
 
