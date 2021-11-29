@@ -1,0 +1,229 @@
+{
+  "client": "Thunder Client",
+  "collectionName": "coderhouse/backend",
+  "dateExported": "2021-11-25T21:21:00.145Z",
+  "version": "1.1",
+  "folders": [
+    {
+      "containerId": "",
+      "sortNum": 10000,
+      "name": "productos",
+      "_id": "c89e996d-4f40-4f17-957a-c8763a4aeef0",
+      "created": "2021-11-25T20:51:35.045Z"
+    },
+    {
+      "containerId": "",
+      "sortNum": 30000,
+      "name": "carrito",
+      "_id": "4a786755-4c97-4da2-96b7-8bbb74675f54",
+      "created": "2021-11-25T21:04:55.348Z"
+    }
+  ],
+  "requests": [
+    {
+      "containerId": "c89e996d-4f40-4f17-957a-c8763a4aeef0",
+      "sortNum": 10000,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.io)"
+        }
+      ],
+      "colId": "c72fd5c7-ff07-4066-8833-2e9f342bd3f2",
+      "name": "/api/productos",
+      "url": "http://localhost:8080/api/productos/",
+      "method": "GET",
+      "modified": "2021-11-25T20:54:47.831Z",
+      "created": "2021-11-25T20:51:47.620Z",
+      "_id": "410bb7a7-51a8-4380-9e65-87fb1212976c",
+      "params": [],
+      "tests": []
+    },
+    {
+      "containerId": "c89e996d-4f40-4f17-957a-c8763a4aeef0",
+      "sortNum": 20000,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.io)"
+        }
+      ],
+      "colId": "c72fd5c7-ff07-4066-8833-2e9f342bd3f2",
+      "name": "/api/productos/:id",
+      "url": "http://localhost:8080/api/productos/1",
+      "method": "GET",
+      "modified": "2021-11-25T20:55:12.677Z",
+      "created": "2021-11-25T20:52:32.054Z",
+      "_id": "b7a14b91-37ea-45ee-829a-0a63d55cd47f",
+      "params": [],
+      "tests": []
+    },
+    {
+      "containerId": "c89e996d-4f40-4f17-957a-c8763a4aeef0",
+      "sortNum": 30000,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.io)"
+        }
+      ],
+      "colId": "c72fd5c7-ff07-4066-8833-2e9f342bd3f2",
+      "name": "/api/productos",
+      "url": "http://localhost:8080/api/productos",
+      "method": "POST",
+      "modified": "2021-11-25T21:20:12.618Z",
+      "created": "2021-11-25T20:52:48.977Z",
+      "_id": "642490e1-ce04-4874-a785-73b953edd0ad",
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n    \"nombre\": \"auriculares\",\n    \"descripcion\": \"auriculares stereo bluetooth\",\n    \"categoria\": \"celulares\",\n    \"precio\": 2500,\n    \"imagen\": \"http://www.google.com.ar\",\n    \"stock\": 3\n}",
+        "form": []
+      },
+      "tests": []
+    },
+    {
+      "containerId": "c89e996d-4f40-4f17-957a-c8763a4aeef0",
+      "sortNum": 40000,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.io)"
+        }
+      ],
+      "colId": "c72fd5c7-ff07-4066-8833-2e9f342bd3f2",
+      "name": "/api/productos/:id",
+      "url": "http://localhost:8080/api/productos/1",
+      "method": "PUT",
+      "modified": "2021-11-25T20:55:39.108Z",
+      "created": "2021-11-25T20:53:06.878Z",
+      "_id": "e332d4ae-1983-49b1-bbe3-7a12809639a9",
+      "params": [],
+      "tests": []
+    },
+    {
+      "containerId": "c89e996d-4f40-4f17-957a-c8763a4aeef0",
+      "sortNum": 50000,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.io)"
+        }
+      ],
+      "colId": "c72fd5c7-ff07-4066-8833-2e9f342bd3f2",
+      "name": "/api/products/:id",
+      "url": "http://localhost:8080/api/productos/1",
+      "method": "DELETE",
+      "modified": "2021-11-25T20:55:48.149Z",
+      "created": "2021-11-25T20:53:25.369Z",
+      "_id": "f746a4de-144d-4751-8b17-2bccc7c9092d",
+      "params": [],
+      "tests": []
+    },
+    {
+      "containerId": "4a786755-4c97-4da2-96b7-8bbb74675f54",
+      "sortNum": 60000,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.io)"
+        }
+      ],
+      "colId": "c72fd5c7-ff07-4066-8833-2e9f342bd3f2",
+      "name": "/api/carrito",
+      "url": "http://localhost:8080/api/carrito/",
+      "method": "GET",
+      "modified": "2021-11-25T21:05:31.896Z",
+      "created": "2021-11-25T21:05:19.407Z",
+      "_id": "adee1738-5127-4415-af23-c6555d16bfba",
+      "params": [],
+      "tests": []
+    },
+    {
+      "containerId": "4a786755-4c97-4da2-96b7-8bbb74675f54",
+      "sortNum": 70000,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.io)"
+        }
+      ],
+      "colId": "c72fd5c7-ff07-4066-8833-2e9f342bd3f2",
+      "name": "/api/carrito/:id",
+      "url": "http://localhost:8080/api/carrito/1",
+      "method": "GET",
+      "modified": "2021-11-25T21:05:48.497Z",
+      "created": "2021-11-25T21:05:44.277Z",
+      "_id": "37214610-bfb4-45a9-88fe-14fddba0a4f2",
+      "params": [],
+      "tests": []
+    },
+    {
+      "containerId": "4a786755-4c97-4da2-96b7-8bbb74675f54",
+      "sortNum": 80000,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.io)"
+        }
+      ],
+      "colId": "c72fd5c7-ff07-4066-8833-2e9f342bd3f2",
+      "name": "/api/carrito",
+      "url": "http://localhost:8080/api/carrito/",
+      "method": "POST",
+      "modified": "2021-11-25T21:06:05.299Z",
+      "created": "2021-11-25T21:06:01.937Z",
+      "_id": "511e9683-2d42-4d63-b946-c6327af2e4a1",
+      "params": [],
+      "tests": []
+    },
+    {
+      "containerId": "4a786755-4c97-4da2-96b7-8bbb74675f54",
+      "sortNum": 90000,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.io)"
+        }
+      ],
+      "colId": "c72fd5c7-ff07-4066-8833-2e9f342bd3f2",
+      "name": "/api/carrito/:id",
+      "url": "http://localhost:8080/api/carrito/1",
+      "method": "PUT",
+      "modified": "2021-11-25T21:06:20.017Z",
+      "created": "2021-11-25T21:06:15.334Z",
+      "_id": "c716e539-9361-4cc7-8ef7-4df294e7f92a",
+      "params": [],
+      "tests": []
+    },
+    {
+      "containerId": "4a786755-4c97-4da2-96b7-8bbb74675f54",
+      "sortNum": 100000,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.io)"
+        }
+      ],
+      "colId": "c72fd5c7-ff07-4066-8833-2e9f342bd3f2",
+      "name": "/api/carrito/:id",
+      "url": "http://localhost:8080/api/carrito/1",
+      "method": "DELETE",
+      "modified": "2021-11-25T21:06:44.654Z",
+      "created": "2021-11-25T21:06:30.925Z",
+      "_id": "785405f7-e036-4159-a655-3b3beb5c428b",
+      "params": [],
+      "tests": []
+    }
+  ]
+}

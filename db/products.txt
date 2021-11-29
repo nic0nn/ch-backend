@@ -1,0 +1,32 @@
+[
+  {
+    "id": "4fbbdcc57ecab69b",
+    "timestamp": 1638166853777,
+    "name": "yerba",
+    "description": "prueba",
+    "price": 240,
+    "image": "http://www.google.com.ar",
+    "stock": 12,
+    "code": "LL104"
+  },
+  {
+    "id": "c34267476b6a47c0",
+    "timestamp": 1638167073669,
+    "name": "azucar",
+    "description": "prueba",
+    "price": 240,
+    "image": "http://www.google.com.ar",
+    "stock": 12,
+    "code": "LL104"
+  },
+  {
+    "id": "3cc906328ae70259",
+    "timestamp": 1638170436592,
+    "name": "mani salado",
+    "description": "prueba",
+    "price": 240,
+    "image": "http://www.google.com.ar",
+    "stock": 12,
+    "code": "LL104"
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "name": "proyecto_final",
+  "version": "1.0.0",
+  "description": "Proyecto final para el curso Backend de CoderHouse",
+  "main": "index.js",
+  "scripts": {
+    "admin": "ADMIN=true node index.js",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nicolas Bastias",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
