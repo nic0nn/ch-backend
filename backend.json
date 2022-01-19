@@ -1,7 +1,7 @@
 {
   "client": "Thunder Client",
   "collectionName": "coderhouse/backend",
-  "dateExported": "2021-11-25T21:21:00.145Z",
+  "dateExported": "2022-01-17T00:10:16.039Z",
   "version": "1.1",
   "folders": [
     {
@@ -52,9 +52,9 @@
       ],
       "colId": "c72fd5c7-ff07-4066-8833-2e9f342bd3f2",
       "name": "/api/productos/:id",
-      "url": "http://localhost:8080/api/productos/1",
+      "url": "http://localhost:8080/api/productos/d21db2926d892e41",
       "method": "GET",
-      "modified": "2021-11-25T20:55:12.677Z",
+      "modified": "2022-01-17T00:06:19.868Z",
       "created": "2021-11-25T20:52:32.054Z",
       "_id": "b7a14b91-37ea-45ee-829a-0a63d55cd47f",
       "params": [],
@@ -74,13 +74,13 @@
       "name": "/api/productos",
       "url": "http://localhost:8080/api/productos",
       "method": "POST",
-      "modified": "2021-11-25T21:20:12.618Z",
+      "modified": "2022-01-16T21:33:32.663Z",
       "created": "2021-11-25T20:52:48.977Z",
       "_id": "642490e1-ce04-4874-a785-73b953edd0ad",
       "params": [],
       "body": {
         "type": "json",
-        "raw": "{\n    \"nombre\": \"auriculares\",\n    \"descripcion\": \"auriculares stereo bluetooth\",\n    \"categoria\": \"celulares\",\n    \"precio\": 2500,\n    \"imagen\": \"http://www.google.com.ar\",\n    \"stock\": 3\n}",
+        "raw": "{\n    \"name\": \"mani salado\",\n    \"description\": \"muy salado\",\n    \"price\": 240,\n    \"image\": \"http://www.google.com.ar\",\n    \"code\": \"LO302\",\n    \"stock\": 5\n}",
         "form": []
       },
       "tests": []
@@ -97,12 +97,17 @@
       ],
       "colId": "c72fd5c7-ff07-4066-8833-2e9f342bd3f2",
       "name": "/api/productos/:id",
-      "url": "http://localhost:8080/api/productos/1",
+      "url": "http://localhost:8080/api/productos/d21db2926d892e41",
       "method": "PUT",
-      "modified": "2021-11-25T20:55:39.108Z",
+      "modified": "2022-01-17T00:06:24.608Z",
       "created": "2021-11-25T20:53:06.878Z",
       "_id": "e332d4ae-1983-49b1-bbe3-7a12809639a9",
       "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n    \"description\": \"mani re salado\",\n    \"code\": \"LL1123\"\n}",
+        "form": []
+      },
       "tests": []
     },
     {
@@ -117,51 +122,11 @@
       ],
       "colId": "c72fd5c7-ff07-4066-8833-2e9f342bd3f2",
       "name": "/api/products/:id",
-      "url": "http://localhost:8080/api/productos/1",
+      "url": "http://localhost:8080/api/productos/d21db2926d892e41",
       "method": "DELETE",
-      "modified": "2021-11-25T20:55:48.149Z",
+      "modified": "2022-01-17T00:06:58.341Z",
       "created": "2021-11-25T20:53:25.369Z",
       "_id": "f746a4de-144d-4751-8b17-2bccc7c9092d",
-      "params": [],
-      "tests": []
-    },
-    {
-      "containerId": "4a786755-4c97-4da2-96b7-8bbb74675f54",
-      "sortNum": 60000,
-      "headers": [
-        { "name": "Accept", "value": "*/*" },
-        {
-          "name": "User-Agent",
-          "value": "Thunder Client (https://www.thunderclient.io)"
-        }
-      ],
-      "colId": "c72fd5c7-ff07-4066-8833-2e9f342bd3f2",
-      "name": "/api/carrito",
-      "url": "http://localhost:8080/api/carrito/",
-      "method": "GET",
-      "modified": "2021-11-25T21:05:31.896Z",
-      "created": "2021-11-25T21:05:19.407Z",
-      "_id": "adee1738-5127-4415-af23-c6555d16bfba",
-      "params": [],
-      "tests": []
-    },
-    {
-      "containerId": "4a786755-4c97-4da2-96b7-8bbb74675f54",
-      "sortNum": 70000,
-      "headers": [
-        { "name": "Accept", "value": "*/*" },
-        {
-          "name": "User-Agent",
-          "value": "Thunder Client (https://www.thunderclient.io)"
-        }
-      ],
-      "colId": "c72fd5c7-ff07-4066-8833-2e9f342bd3f2",
-      "name": "/api/carrito/:id",
-      "url": "http://localhost:8080/api/carrito/1",
-      "method": "GET",
-      "modified": "2021-11-25T21:05:48.497Z",
-      "created": "2021-11-25T21:05:44.277Z",
-      "_id": "37214610-bfb4-45a9-88fe-14fddba0a4f2",
       "params": [],
       "tests": []
     },
@@ -187,26 +152,6 @@
     },
     {
       "containerId": "4a786755-4c97-4da2-96b7-8bbb74675f54",
-      "sortNum": 90000,
-      "headers": [
-        { "name": "Accept", "value": "*/*" },
-        {
-          "name": "User-Agent",
-          "value": "Thunder Client (https://www.thunderclient.io)"
-        }
-      ],
-      "colId": "c72fd5c7-ff07-4066-8833-2e9f342bd3f2",
-      "name": "/api/carrito/:id",
-      "url": "http://localhost:8080/api/carrito/1",
-      "method": "PUT",
-      "modified": "2021-11-25T21:06:20.017Z",
-      "created": "2021-11-25T21:06:15.334Z",
-      "_id": "c716e539-9361-4cc7-8ef7-4df294e7f92a",
-      "params": [],
-      "tests": []
-    },
-    {
-      "containerId": "4a786755-4c97-4da2-96b7-8bbb74675f54",
       "sortNum": 100000,
       "headers": [
         { "name": "Accept", "value": "*/*" },
@@ -217,11 +162,76 @@
       ],
       "colId": "c72fd5c7-ff07-4066-8833-2e9f342bd3f2",
       "name": "/api/carrito/:id",
-      "url": "http://localhost:8080/api/carrito/1",
+      "url": "http://localhost:8080/api/carrito/41fdfe728d6de382",
       "method": "DELETE",
-      "modified": "2021-11-25T21:06:44.654Z",
+      "modified": "2021-11-29T05:27:03.855Z",
       "created": "2021-11-25T21:06:30.925Z",
       "_id": "785405f7-e036-4159-a655-3b3beb5c428b",
+      "params": [],
+      "tests": []
+    },
+    {
+      "containerId": "4a786755-4c97-4da2-96b7-8bbb74675f54",
+      "sortNum": 120000,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.io)"
+        }
+      ],
+      "colId": "c72fd5c7-ff07-4066-8833-2e9f342bd3f2",
+      "name": "/api/carrito/:id/productos",
+      "url": "http://localhost:8080/api/carrito/61e492f8bb0e01b8393e8c92/productos",
+      "method": "POST",
+      "modified": "2022-01-16T21:58:51.697Z",
+      "created": "2021-11-29T05:09:49.123Z",
+      "_id": "9106bd14-baf1-4ffb-84ac-bc957d7e51df",
+      "params": [],
+      "body": {
+        "type": "json",
+        "raw": "{\n    \"products\": [\n       { \"_id\": \"61e48edfe1a0a789ac636a47\", \"quantity\": 2 }\n    ]\n}",
+        "form": []
+      },
+      "tests": []
+    },
+    {
+      "containerId": "4a786755-4c97-4da2-96b7-8bbb74675f54",
+      "sortNum": 130000,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.io)"
+        }
+      ],
+      "colId": "c72fd5c7-ff07-4066-8833-2e9f342bd3f2",
+      "name": "/api/carrito/:id/productos",
+      "url": "http://localhost:8080/api/carrito/61e492f8bb0e01b8393e8c92/productos",
+      "method": "GET",
+      "modified": "2022-01-16T21:49:50.335Z",
+      "created": "2021-11-29T05:08:02.459Z",
+      "_id": "4b35e779-218d-41d2-9af6-a123e55686f2",
+      "params": [],
+      "tests": []
+    },
+    {
+      "containerId": "4a786755-4c97-4da2-96b7-8bbb74675f54",
+      "sortNum": 140000,
+      "headers": [
+        { "name": "Accept", "value": "*/*" },
+        {
+          "name": "User-Agent",
+          "value": "Thunder Client (https://www.thunderclient.io)"
+        }
+      ],
+      "colId": "c72fd5c7-ff07-4066-8833-2e9f342bd3f2",
+      "name": "/api/carrito/:id/:productId",
+      "url": "http://localhost:8080/api/carrito/61e492f8bb0e01b8393e8c92/61e48edfe1a0a789ac636a47",
+      "method": "DELETE",
+      "modified": "2022-01-16T22:11:28.314Z",
+      "created": "2021-11-29T05:30:17.138Z",
+      "_id": "2224033f-fb49-43f2-8f86-0cf81ead652c",
       "params": [],
       "tests": []
     }

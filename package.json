@@ -6,11 +6,15 @@
   "scripts": {
     "admin": "ADMIN=true node index.js",
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "mongodb": "DB_TYPE=mongodb node index.js",
+    "filesystem": "DB_TYPE=filesystem node index.js",
+    "firestore": "DB_TYPE=firestore node index.js"
   },
   "author": "Nicolas Bastias",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "firebase-admin": "^10.0.1",
+    "mongoose": "^6.1.6"
   }
 }

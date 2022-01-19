@@ -1,12 +1,12 @@
-const { isAdmin } = require("./../config");
+const { IS_ADMIN } = require("./../config");
 
 exports.addAdmin = (req, res, next) => {
-  req.isAdmin = isAdmin;
+  req.IS_ADMIN = IS_ADMIN;
   next();
 };
 
-exports.isAdmin = (req, res, next) => {
-  if (req.isAdmin) {
+exports.IS_ADMIN = (req, res, next) => {
+  if (req.IS_ADMIN) {
     return next();
   }
   return res.status(401).json({

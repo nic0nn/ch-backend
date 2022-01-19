@@ -1,1 +1,8 @@
-exports.auth = require("./auth")
+const auth = require("./auth");
+
+const errors = require("./errors");
+
+module.exports = {
+  auth,
+  errors,
+};

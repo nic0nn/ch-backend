@@ -1,0 +1,22 @@
+[
+  {
+    "_id": "34c03c348135e49c",
+    "timestamp": 1642367986707,
+    "name": "yerba mate piporé",
+    "description": "yerba mate Piporé. La mejor yerba",
+    "price": 240,
+    "image": "http://www.google.com.ar",
+    "stock": 5,
+    "code": "LO302"
+  },
+  {
+    "_id": "cf48bda821201f44",
+    "timestamp": 1642378032556,
+    "name": "mani salado",
+    "description": "muy salado",
+    "price": 240,
+    "image": "http://www.google.com.ar",
+    "stock": 5,
+    "code": "LO302"
+  }
+]

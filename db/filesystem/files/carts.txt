@@ -1,0 +1,36 @@
+[
+  {
+    "_id": "63e31962ff3afa77",
+    "timestamp": 1642551292654,
+    "products": [
+      {
+        "_id": "34c03c348135e49c",
+        "timestamp": 1642367986707,
+        "name": "yerba mate piporé",
+        "description": "yerba mate Piporé. La mejor yerba",
+        "price": 240,
+        "image": "http://www.google.com.ar",
+        "stock": 5,
+        "code": "LO302",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "_id": "33127f7e1e919cb9",
+    "timestamp": 1642551474882,
+    "products": [
+      {
+        "_id": "34c03c348135e49c",
+        "timestamp": 1642367986707,
+        "name": "yerba mate piporé",
+        "description": "yerba mate Piporé. La mejor yerba",
+        "price": 240,
+        "image": "http://www.google.com.ar",
+        "stock": 5,
+        "code": "LO302",
+        "quantity": 2
+      }
+    ]
+  }
+]
