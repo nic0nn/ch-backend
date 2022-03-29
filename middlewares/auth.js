@@ -1,5 +1,4 @@
 const { APIError } = require("../utils");
-const { IS_ADMIN } = require("./../configuration");
 
 exports.adminOnly = (req, res, next) => {
 	const error = new APIError(

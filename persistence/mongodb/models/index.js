@@ -1,2 +1,3 @@
 exports.Product = require("./Product");
-exports.Cart = require("./Cart");
+exports.Order = require("./Order");
+exports.User = require("./User");

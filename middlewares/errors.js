@@ -1,7 +1,7 @@
 const { APIError, Logger } = require("../utils");
 
 const errors = (error, req, res, next) => {
-	Logger.error(error);
+	Logger.error(error, error.stack);
 
 	if (error.name === "CastError") {
 		res.status(400).send({ status: "error", message: "id inválido" });

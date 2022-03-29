@@ -1,4 +1,4 @@
-const User = require("../models/User");
+const { User } = require("../models");
 
 const DAO = {
 	create: async (user) => {
@@ -11,9 +11,16 @@ const DAO = {
 	findOne: async (filter) => {
 		return await User.findOne({ ...filter }).lean();
 	},
-  getAdmin: async () => {
-    return await User.findOne({ role: "admin" });
-  }
+	findById: async (id) => {
+		return await User.findById(id).lean();
+	},
+	getAdmin: async () => {
+		return await User.findOne({ role: "admin" });
+	},
+	update: async (userId, data) => {
+		const user = await User.findByIdAndUpdate(userId, data, { new: true }).lean();
+		return user;
+	}
 };
 
-module.exports = DAO
+module.exports = DAO;

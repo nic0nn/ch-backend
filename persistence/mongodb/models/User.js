@@ -7,15 +7,12 @@ const schema = new Moongose.Schema({
 	},
 	name: {
 		type: String,
-		required: true
 	},
 	lastname: {
 		type: String,
-		required: true
 	},
 	email: {
 		type: String,
-		required: true
 	},
 	password: {
 		type: String,
@@ -23,7 +20,6 @@ const schema = new Moongose.Schema({
 	},
 	phone: {
 		type: String,
-		required: true
 	},
 	role: {
 		type: String,

@@ -1,10 +1,11 @@
 const passport = require("passport");
 const bcrypt = require("bcrypt");
+
 const LocalStrategy = require("passport-local").Strategy;
 const JWTstrategy = require("passport-jwt").Strategy;
 const ExtractJwt = require("passport-jwt").ExtractJwt;
 
-const User = require("../persistence").dao("users");
+const User = require("../persistence").getDAO("users");
 
 const { JWT_SECRET } = require("../configuration");
 const { APIError } = require("../utils");
@@ -27,6 +28,29 @@ passport.use(
 				if (!result) return done(error, false);
 
 				return done(null, user);
+			} catch (error) {
+				return done(error, false);
+			}
+		}
+	)
+);
+
+passport.use(
+	"register",
+	new LocalStrategy(
+		{
+			usernameField: "username",
+			passwordField: "password"
+		},
+		async (username, password, done) => {
+			console.log("password: ", password);
+			try {
+				const user = await User.findOne({ username });
+
+				if (user) return done(new APIError(400, "el usuario ya existe"), false);
+				const hash = bcrypt.hashSync(password, 10);
+				const newUser = await User.create({ username, password: hash });
+				return done(null, newUser);
 			} catch (error) {
 				return done(error, false);
 			}

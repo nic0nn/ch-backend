@@ -1,10 +1,10 @@
 const configuration = require("../configuration");
 
-const { connect, dao } = require(`./${
+const { connect, getDAO } = require(`./${
 	configuration.DB_TYPE ? configuration.DB_TYPE : "mongodb"
 }`);
 
 module.exports = {
-  dao,
+  getDAO,
 	connect
 };

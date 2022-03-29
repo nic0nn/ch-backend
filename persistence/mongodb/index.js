@@ -1,9 +1,9 @@
 const mongoose = require("mongoose");
+
 const configuration = require("../../configuration");
 const utils = require("../../utils");
 
-exports.models = require("./models");
-exports.dao = require("./dao");
+exports.getDAO = require("./dao");
 
 exports.connect = () => {
 	mongoose.connect(configuration.MONGO_URL, configuration.MONGO_OPTIONS).then(() => {

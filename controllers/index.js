@@ -1,3 +1,4 @@
 exports.ProductController = require("./products")
-exports.CartController = require("./cart")
 exports.UsersController = require("./users")
+exports.CartController = require("./cart")
+exports.OrderController = require("./orders")

@@ -1,18 +1,18 @@
-const Cart = require("./Cart");
+const Order = require("./Order");
 const Product = require("./Product");
 const User = require("./User");
 
-const dao = (type) => {
+const getDAO = (type) => {
   switch (type) {
     case "products":
       return Product
-    case "cart":
-      return Cart
+    case "orders":
+      return Order
     case "users":
       return User
     default:
-      return Cart
+      return {}
   }
 }
 
-module.exports = dao
+module.exports = getDAO
