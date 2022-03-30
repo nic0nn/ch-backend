@@ -24,14 +24,14 @@ exports.update = async (id, data) => {
 	if (!product) {
 		throw new APIError(404, `producto ${id} no encontrado`);
 	}
-	return await Product.update(id, data);;
+	return await Product.update(id, data);
 };
 
 exports.delete = async (id) => {
-  const product = await Product.findById(id);
-  if (!product) {
-    throw new APIError(404, `producto ${id} no encontrado`);
-  }
-  await Product.delete(id);
-  return true;
-}
+	const product = await Product.findById(id);
+	if (!product) {
+		throw new APIError(404, `producto ${id} no encontrado`);
+	}
+	await Product.delete(id);
+	return true;
+};

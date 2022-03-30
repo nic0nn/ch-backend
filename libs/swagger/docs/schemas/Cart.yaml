@@ -1,0 +1,31 @@
+components:
+  schemas:
+    Cart:
+      type: object
+      required:
+        - products
+        - userId
+        - total
+      properties:
+        _id:
+          type: string
+          description: id autogenerado por mongodb
+        userId:
+          type: string
+          description: id del usuario
+        products:
+          type: array
+          description: productos del pedido
+        total:
+          type: number
+          description: total del pedido
+        createdAt:
+          type: string
+          description: fecha de creacion
+        updatedAt:
+          type: string
+          description: fecha de actualizacion
+      example:
+        userId: 5e9f8f8f9c8e8b3c8c8c8c8c
+        total: 100
+        products: []

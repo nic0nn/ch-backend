@@ -1,0 +1,28 @@
+components:
+  requestBodies:
+    Register:
+      description: Register
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - username
+              - password
+            properties:
+              username: 
+                type: string 
+                example: n1c0nn
+              password:
+                type: string
+                example: 123456
+              name:
+                type: string
+                example: Nicolas
+              lastname:
+                type: string
+                example: Bastias
+              phone:
+                type: string
+                example: +56912345678
+       

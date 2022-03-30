@@ -1,0 +1,46 @@
+components:
+  schemas:
+    Product:
+      type: object
+      required:
+        - name
+        - description
+        - price
+        - image
+        - stock
+        - code
+      properties:
+        _id:
+          type: string
+          description: id autogenerado por mongodb
+        name:
+          type: string
+          description: nombre del producto
+        price:
+          type: number
+          description: precio del producto
+        description:
+          type: string
+          description: descripción del producto
+        image:
+          type: string
+          description: url de la imagen del producto
+        stock:
+          type: number
+          description: cantidad de productos disponibles
+        code:
+          type: string
+          description: código de barras del producto
+        createdAt:
+          type: string
+          description: fecha de creación del producto
+        updatedAt:
+          type: string
+          description: fecha de actualización del producto
+      example:
+        name: Producto 1
+        price: 100
+        description: Descripción del producto 1
+        image: https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png
+        stock: 10
+        code: 123456789

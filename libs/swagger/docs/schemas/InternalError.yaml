@@ -1,0 +1,9 @@
+components:
+  schemas:
+    InternalError:
+      type: object
+      properties:
+        message:
+          type: string
+          description: Mensaje de error
+          example: error interno del servidor

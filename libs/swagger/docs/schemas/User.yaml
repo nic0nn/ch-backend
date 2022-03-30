@@ -1,0 +1,67 @@
+components:
+  schemas:
+    User:
+      type: object
+      required:
+        - username
+        - password
+      properties:
+        _id:
+          type: string
+          description: id autogenerado por mongodb
+        username:
+          type: string
+          description: nombre de usuario
+        password:
+          type: string
+          description: contraseña
+        name:
+          type: string
+          description: nombre personal
+        lastname:
+          type: string
+          description: apellido personal
+        email:
+          type: string
+          description: correo electronico
+        phone:
+          type: string
+          description: telefono personal
+        cart:
+          type: array
+          description: carrito de compras
+          items:
+            type: object
+            properties:
+              _id:
+                type: string
+                description: id autogenerado por mongodb
+              product:
+                type: string
+                description: id del producto
+              quantity:
+                type: integer
+                description: cantidad del producto
+              price:
+                type: number
+                description: precio del producto
+              total:
+                type: number
+                description: total del producto
+        createdAt:
+          type: string
+          description: fecha de creacion
+        updatedAt:
+          type: string
+          description: fecha de actualizacion
+      example:
+        username: n1c0nn
+        password: 123456,
+        name: Nicolas
+        lastname: Bastias
+        email: nikobastias@gmail.com
+        phone: +5730081234
+        cart: []
+        createdAt: 2020-05-05T19:00:00.000Z
+        updatedAt: 2020-05-05T19:00:00.000Z
+        

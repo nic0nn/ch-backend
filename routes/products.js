@@ -2,7 +2,7 @@ const express = require("express");
 const { ProductController } = require("../controllers");
 const router = express.Router();
 const middlewares = require("../middlewares");
-const passport = require("../passport");
+const passport = require("../libs/passport");
 
 router.get(
 	"/:id?",
@@ -20,7 +20,7 @@ router.post(
 router.put(
 	"/:id",
 	passport.authenticate("jwt", { session: false }),
-  middlewares.auth.adminOnly,
+	middlewares.auth.adminOnly,
 	ProductController.updateProduct
 );
 

@@ -1,0 +1,17 @@
+components:
+  requestBodies:
+    Login:
+      description: Login
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              username:
+                type: string
+                description: username
+                example: admin
+              password:
+                type: string
+                description: password
+                example: admin

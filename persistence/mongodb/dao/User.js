@@ -18,7 +18,9 @@ const DAO = {
 		return await User.findOne({ role: "admin" });
 	},
 	update: async (userId, data) => {
-		const user = await User.findByIdAndUpdate(userId, data, { new: true }).lean();
+		const user = await User.findByIdAndUpdate(userId, data, {
+			new: true
+		}).lean();
 		return user;
 	}
 };

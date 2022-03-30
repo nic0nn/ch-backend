@@ -5,6 +5,6 @@ const { connect, getDAO } = require(`./${
 }`);
 
 module.exports = {
-  getDAO,
+	getDAO,
 	connect
 };

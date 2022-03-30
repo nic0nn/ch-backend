@@ -1,0 +1,22 @@
+components:
+  requestBodies:
+    AddProducts:
+      description: Agregar productos
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              products:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    _id:
+                      type: string
+                      description: id del producto
+                      example: 6243c59d38994fdd6cf5f522
+                    quantity:
+                      type: integer
+                      description: cantidad de productos
+                      example: 1

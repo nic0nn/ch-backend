@@ -1,0 +1,67 @@
+paths:
+  /products/{id}:
+    put:
+      summary: Actualiza un producto
+      operationId: updateProduct
+      parameters:
+      - name: id
+        in: path
+        description: id del producto
+        required: true
+        schema:
+          type: string
+      security:
+        - BearerAuth: []
+      tags:
+        - Products
+      requestBody:
+        $ref: '#/components/requestBodies/UpdateProduct'
+      responses:
+        '201':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Product'
+        '401':
+          description: No autorizado
+        '403':
+          description: No autorizado
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Mensaje de error
+                    example: No tiene permisos para realizar esta acción
+                  status:
+                    type: string
+                    description: Estado de la petición
+                    example: error
+        '404':
+          description: Producto no encontrado
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Mensaje de error
+                    example: producto 6243c59d38994fdd6cf5f522 no encontrado
+                  status:
+                    type: string
+                    description: Estado de la petición
+                    example: error
+        '500':
+          description: Error interno
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalError'
+        
+        

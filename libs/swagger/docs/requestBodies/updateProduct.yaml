@@ -1,0 +1,8 @@
+components:
+  requestBodies:
+    UpdateProduct:
+      description: Actualiza un producto
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Product'

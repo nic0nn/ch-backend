@@ -3,23 +3,23 @@ const Moongose = require("mongoose");
 const schema = new Moongose.Schema({
 	username: {
 		type: String,
-		required: true,
+		required: true
 	},
 	name: {
-		type: String,
+		type: String
 	},
 	lastname: {
-		type: String,
+		type: String
 	},
 	email: {
-		type: String,
+		type: String
 	},
 	password: {
 		type: String,
 		required: true
 	},
 	phone: {
-		type: String,
+		type: String
 	},
 	role: {
 		type: String,
@@ -36,7 +36,7 @@ const schema = new Moongose.Schema({
 	updatedAt: {
 		type: Date,
 		default: Date.now()
-	},
+	}
 });
 
 module.exports = Moongose.model("users", schema);

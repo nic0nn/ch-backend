@@ -1,0 +1,46 @@
+paths:
+  /products/{id}:
+    get:
+      summary: Obtiene un producto por id
+      operationId: getProductById
+      tags:
+        - Products
+      parameters:
+        - name: id
+          in: path
+          description: id del producto
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Product'
+        '404':
+          description: Producto no encontrado
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Mensaje de error
+                    example: producto 6243c59d38994fdd6cf5f522 no encontrado
+                  status:
+                    type: string
+                    description: Estado de la petición
+                    example: error
+        '500':
+          description: Error interno
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalError'
+        
+        

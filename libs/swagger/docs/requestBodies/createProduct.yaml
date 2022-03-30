@@ -1,0 +1,8 @@
+components:
+  requestBodies:
+    CreateProduct:
+      description: Crea un producto
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Product'

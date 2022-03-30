@@ -1,0 +1,57 @@
+components:
+  schemas:
+    Order:
+      type: object
+      required:
+        - products
+        - userId
+        - total
+      properties:
+        _id:
+          type: string
+          description: id autogenerado por mongodb
+        userId:
+          type: string
+          description: id del usuario
+        products:
+          type: array
+          description: productos del pedido
+          items:
+            type: object
+            properties:
+              _id:
+                type: string
+                description: id del producto
+                example: 6243c59d38994fdd6cf5f522
+              name:
+                type: string
+                description: nombre del producto
+                example: producto 1
+              price:
+                type: number
+                description: precio del producto
+                example: 100
+              quantity:
+                type: integer
+                description: cantidad de productos
+                example: 1
+        total:
+          type: number
+          description: total del pedido
+        createdAt:
+          type: string
+          description: fecha de creacion
+        updatedAt:
+          type: string
+          description: fecha de actualizacion
+      example:
+        userId: 5e9f8f8f9c8e8b3c8c8c8c8c
+        total: 100
+        products: [
+          {
+            _id: 6243c59d38994fdd6cf5f522,
+            name: producto 1,
+            price: 100,
+            quantity: 1
+          }
+        ]

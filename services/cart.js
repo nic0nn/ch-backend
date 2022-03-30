@@ -1,4 +1,3 @@
-
 const { APIError } = require("../utils");
 
 const Users = require("../persistence").getDAO("users");

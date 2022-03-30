@@ -5,10 +5,10 @@ const LocalStrategy = require("passport-local").Strategy;
 const JWTstrategy = require("passport-jwt").Strategy;
 const ExtractJwt = require("passport-jwt").ExtractJwt;
 
-const User = require("../persistence").getDAO("users");
+const User = require("../../persistence").getDAO("users");
 
-const { JWT_SECRET } = require("../configuration");
-const { APIError } = require("../utils");
+const { JWT_SECRET } = require("../../configuration");
+const { APIError } = require("../../utils");
 
 passport.use(
 	"login",

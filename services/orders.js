@@ -1,9 +1,9 @@
-
 const { APIError } = require("../utils");
 
 const Users = require("../persistence").getDAO("users");
 const Products = require("../persistence").getDAO("products");
 const Orders = require("../persistence").getDAO("orders");
+console.log("Orders: ", Orders);
 
 exports.generateOrder = async (userId) => {
 	const user = await Users.findById(userId);
@@ -50,7 +50,7 @@ exports.getOrders = async (userId) => {
 		throw new APIError(404, "usuario no encontrado");
 	}
 
-	const orders = await Orders.find({ userId: userId });
+	const orders = await Orders.getAll(userId);
 
 	return orders;
-}
+};

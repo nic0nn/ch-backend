@@ -1,0 +1,47 @@
+paths:
+  /products:
+    post:
+      summary: Crea un producto
+      operationId: createProduct
+      security:
+        - BearerAuth: []
+      tags:
+        - Products
+      requestBody:
+        $ref: '#/components/requestBodies/CreateProduct'
+      responses:
+        '201':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Product'
+        '400':
+          description: Faltan datos requeridos
+        '403':
+          description: No autorizado
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Mensaje de error
+                    example: No tiene permisos para realizar esta acción
+                  status:
+                    type: string
+                    description: Estado de la petición
+                    example: error
+        '401':
+          description: No autorizado
+        '500':
+          description: Error interno
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalError'
+        
+        

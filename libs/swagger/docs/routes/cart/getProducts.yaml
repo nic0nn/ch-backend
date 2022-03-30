@@ -1,0 +1,52 @@
+paths:
+  /cart/products:
+    get:
+      summary: Obtiene los productos en el carrito de compras
+      operationId: getProducts
+      security:
+      - BearerAuth: []
+      tags:
+        - Cart
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    _id:
+                      type: string
+                      description: id del producto
+                      example: 6243c59d38994fdd6cf5f522
+                    quantity:
+                      type: integer
+                      description: cantidad de productos
+                      example: 1
+        '401':
+          description: Error de autenticación
+        '404':
+          description: Usuario no encontrado
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Mensaje de error
+                    example: usuario no encontrado
+                  status:
+                    type: string
+                    description: Estado de la petición
+                    example: error
+        '500':
+          description: Error interno
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalError'
+        
+        

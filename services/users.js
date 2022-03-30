@@ -19,5 +19,3 @@ exports.createAdmin = async () => {
 	const admin = await Users.create(data);
 	return admin;
 };
-
-

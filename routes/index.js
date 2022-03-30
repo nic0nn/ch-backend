@@ -1,6 +1,6 @@
 const express = require("express");
 
-const passport = require("../passport");
+const passport = require("../libs/passport");
 
 const products = require("./products");
 const users = require("./users");
