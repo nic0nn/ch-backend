@@ -3,9 +3,12 @@ const Moongose = require("mongoose");
 const schema = new Moongose.Schema({
 	username: {
 		type: String,
-		required: true
+		required: true,
 	},
 	name: {
+		type: String
+	},
+	imageURL: {
 		type: String
 	},
 	lastname: {

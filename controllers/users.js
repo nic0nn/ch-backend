@@ -1,7 +1,8 @@
 const passport = require("passport");
 const jwt = require("jsonwebtoken");
-const User = require("../persistence").getDAO("users");
+const path = require("path")
 
+const User = require("../persistence").getDAO("users");
 const { JWT_SECRET } = require("../configuration");
 const { APIError } = require("../utils");
 
@@ -22,12 +23,14 @@ exports.register = (req, res, next) => {
 		passport.authenticate("register", async (err, user) => {
 			if (err) return next(err);
 			const { email, phone, name, lastname } = req.body;
+			const { file } = req;
 			try {
 				const userData = await User.update(user._id, {
 					email,
 					phone,
 					name,
-					lastname
+					lastname,
+					imageURL: file?.path.replace("public", "")
 				});
 				const token = jwt.sign(userData, JWT_SECRET);
 				return res.respond({ data: { token, user: userData } });

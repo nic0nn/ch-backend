@@ -7,15 +7,13 @@ const schema = new Moongose.Schema({
 	},
 	description: {
 		type: String,
-		required: true
 	},
 	price: {
 		type: Number,
 		required: true
 	},
-	image: {
+	imageURL: {
 		type: String,
-		required: true
 	},
 	stock: {
 		type: Number,
@@ -23,7 +21,6 @@ const schema = new Moongose.Schema({
 	},
 	code: {
 		type: String,
-		required: true
 	},
 	createdAt: {
 		type: Date,

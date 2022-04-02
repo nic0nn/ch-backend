@@ -3,7 +3,6 @@ const { APIError } = require("../utils");
 const Users = require("../persistence").getDAO("users");
 const Products = require("../persistence").getDAO("products");
 const Orders = require("../persistence").getDAO("orders");
-console.log("Orders: ", Orders);
 
 exports.generateOrder = async (userId) => {
 	const user = await Users.findById(userId);

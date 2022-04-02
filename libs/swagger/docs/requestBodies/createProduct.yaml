@@ -3,6 +3,6 @@ components:
     CreateProduct:
       description: Crea un producto
       content:
-        application/json:
+        multipart/form-data:
           schema:
             $ref: '#/components/schemas/Product'

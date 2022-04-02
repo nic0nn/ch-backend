@@ -4,11 +4,8 @@ components:
       type: object
       required:
         - name
-        - description
         - price
-        - image
         - stock
-        - code
       properties:
         _id:
           type: string
@@ -23,7 +20,7 @@ components:
           type: string
           description: descripción del producto
         image:
-          type: string
+          type: file
           description: url de la imagen del producto
         stock:
           type: number

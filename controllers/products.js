@@ -24,11 +24,14 @@ exports.getProductById = async (req, res, next) => {
 exports.createProduct = async (req, res, next) => {
 	try {
 		const { body } = req;
-		const product = await ProductServices.create(body);
+		const product = await ProductServices.create({
+			...body,
+			imageURL: req.file?.path.replace("public", "")
+		});
 		res.respond({
 			status: 201,
 			data: product,
-			message: `producto agregado correctamente`
+			message: `producto ${product.name} agregado correctamente`
 		});
 	} catch (error) {
 		next(error);
@@ -39,7 +42,10 @@ exports.updateProduct = async (req, res, next) => {
 	try {
 		const { id } = req.params;
 		const { body } = req;
-		const product = await ProductServices.update(id, body);
+		const product = await ProductServices.update(id, {
+			...body,
+			imageURL: req.file?.path.replace("public", "")
+		});
 		res.respond({
 			data: product,
 			message: `producto ${id} actualizado correctamente`

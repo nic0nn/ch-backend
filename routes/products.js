@@ -14,6 +14,7 @@ router.post(
 	"/",
 	passport.authenticate("jwt", { session: false }),
 	middlewares.auth.adminOnly,
+	middlewares.multer.upload("image"),
 	ProductController.createProduct
 );
 
@@ -21,6 +22,7 @@ router.put(
 	"/:id",
 	passport.authenticate("jwt", { session: false }),
 	middlewares.auth.adminOnly,
+	middlewares.multer.upload("image"),
 	ProductController.updateProduct
 );
 

@@ -3,7 +3,7 @@ components:
     Register:
       description: Register
       content:
-        application/json:
+        multipart/form-data:
           schema:
             type: object
             required:
@@ -13,16 +13,28 @@ components:
               username: 
                 type: string 
                 example: n1c0nn
+                description: nombre de usuario
               password:
                 type: string
                 example: 123456
+                description: contraseña
+              image:
+                type: file
+                description: imagen de perfil
               name:
                 type: string
                 example: Nicolas
+                description: nombre
               lastname:
                 type: string
                 example: Bastias
+                description: apellido
               phone:
                 type: string
                 example: +56912345678
+                description: telefono
+              email:
+                type: string
+                example: nikobastias@gmail.com
+                description: correo electronico
        
