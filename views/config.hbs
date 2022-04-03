@@ -1,0 +1,20 @@
+<h1>Configuracion del servidor</h1>
+<p>
+	Las siguientes opciones de configuración estan disponibles
+</p>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Opción</th>
+			<th>Valor</th>
+		</tr>
+	</thead>
+	<tbody>
+		{{#each configuration}}
+			<tr>
+				<td>{{@key}}</td>
+				<td>{{this}}</td>
+			</tr>
+		{{/each}}
+	</tbody>
+</table>

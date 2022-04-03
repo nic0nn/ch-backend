@@ -7,7 +7,10 @@ exports.getDAO = require("./dao");
 
 exports.connect = () => {
 	mongoose
-		.connect(configuration.MONGO_URL, configuration.MONGO_OPTIONS)
+		.connect(configuration.MONGO_URL, {
+			useNewUrlParser: true,
+			useUnifiedTopology: true
+		})
 		.then(() => {
 			utils.Logger.debug("Connected to MongoDB");
 		})
