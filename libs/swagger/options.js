@@ -11,9 +11,6 @@ const options = {
 			{
 				url: "http://localhost:3000/api/v1"
 			},
-			{
-				url: "https://c0der-backend.herokuapp.com/api/v1"
-			}
 		],
 		tags: [
 			{
@@ -37,4 +34,7 @@ const options = {
 	apis: ["./libs/swagger/docs/**/*.yaml"]
 };
 
+if (process.env.NODE_ENV === "production") {
+	options.definition.servers = [ { url: "https://c0der-backend.herokuapp.com/api/v1" } ];
+}
 module.exports = options;
