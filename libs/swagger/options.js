@@ -10,6 +10,9 @@ const options = {
 		servers: [
 			{
 				url: "http://localhost:3000/api/v1"
+			},
+			{
+				url: "https://c0der-backend.herokuapp.com/api/v1"
 			}
 		],
 		tags: [
