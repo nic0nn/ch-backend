@@ -10,8 +10,8 @@ components:
               - username
               - password
             properties:
-              username: 
-                type: string 
+              username:
+                type: string
                 example: n1c0nn
                 description: nombre de usuario
               password:
@@ -37,4 +37,3 @@ components:
                 type: string
                 example: nikobastias@gmail.com
                 description: correo electronico
-       

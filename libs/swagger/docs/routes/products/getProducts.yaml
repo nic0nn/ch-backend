@@ -6,18 +6,17 @@ paths:
       tags:
         - Products
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Product'
-        '500':
+                  $ref: "#/components/schemas/Product"
+        "500":
           description: Error interno
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/InternalError'
-        
+                $ref: "#/components/schemas/InternalError"

@@ -6,10 +6,10 @@ paths:
       tags:
         - Users
       requestBody:
-        $ref: '#/components/requestBodies/Register'
+        $ref: "#/components/requestBodies/Register"
 
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -21,8 +21,8 @@ paths:
                     description: token de autorización
                     example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQyNzc3Y2E0ZmU5ZWY1MmEwNWFiZGYiLCJ1c2VybmFtZSI6ImFkbWluIiwibmFtZSI6ImFkbWluIiwibGFzdG5hbWUiOiJhZG1pbiIsImVtYWlsIjoiYWRtaW5AZXhhbXBsZS5vcmciLCJwYXNzd29yZCI6IiQyYiQxMCRIeUtvSDFFVE9mR09MQWVIYmF4aXJPc3A4MVFneDRXMFhtZU9vRU5TM1pPSjdxVVdmOXZPRyIsInBob25lIjoiMTIzNDU2Nzg5MCIsInJvbGUiOiJhZG1pbiIsImNhcnQiOltdLCJjcmVhdGVkQXQiOiIyMDIyLTAzLTI5VDAzOjA1OjMyLjUzN1oiLCJ1cGRhdGVkQXQiOiIyMDIyLTAzLTI5VDAzOjA1OjMyLjUzN1oiLCJfX3YiOjAsImlhdCI6MTY0ODUzNDA2NH0.iL6Blc-o0YwH4Ga26nIXbV_Kvy6b5Tl2yZR26Gmdxwk
                   user:
-                    $ref: '#/components/schemas/User'
-        '400':
+                    $ref: "#/components/schemas/User"
+        "400":
           description: Error al registrar el usuario
           content:
             application/json:
@@ -37,11 +37,9 @@ paths:
                     type: string
                     description: Estado de la petición
                     example: error
-        '500':
+        "500":
           description: Error interno
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/InternalError'
-        
-        
+                $ref: "#/components/schemas/InternalError"

@@ -6,21 +6,21 @@ const schema = new Moongose.Schema({
 		required: true
 	},
 	description: {
-		type: String,
+		type: String
 	},
 	price: {
 		type: Number,
 		required: true
 	},
 	imageURL: {
-		type: String,
+		type: String
 	},
 	stock: {
 		type: Number,
 		required: true
 	},
 	code: {
-		type: String,
+		type: String
 	},
 	createdAt: {
 		type: Date,

@@ -1,6 +1,6 @@
 const passport = require("passport");
 const jwt = require("jsonwebtoken");
-const path = require("path")
+const path = require("path");
 
 const User = require("../persistence").getDAO("users");
 const { JWT_SECRET } = require("../configuration");
@@ -10,6 +10,7 @@ exports.login = (req, res, next) => {
 	try {
 		passport.authenticate("login", (err, user) => {
 			if (err) return next(err);
+			if (!user) throw new APIError(401, "Usuario o contraseña incorrectos");
 			const token = jwt.sign(user, JWT_SECRET);
 			return res.respond({ data: { token, user } });
 		})(req, res, next);

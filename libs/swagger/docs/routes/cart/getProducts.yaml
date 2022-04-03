@@ -4,11 +4,11 @@ paths:
       summary: Obtiene los productos en el carrito de compras
       operationId: getProducts
       security:
-      - BearerAuth: []
+        - BearerAuth: []
       tags:
         - Cart
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -25,9 +25,9 @@ paths:
                       type: integer
                       description: cantidad de productos
                       example: 1
-        '401':
+        "401":
           description: Error de autenticación
-        '404':
+        "404":
           description: Usuario no encontrado
           content:
             application/json:
@@ -42,11 +42,9 @@ paths:
                     type: string
                     description: Estado de la petición
                     example: error
-        '500':
+        "500":
           description: Error interno
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/InternalError'
-        
-        
+                $ref: "#/components/schemas/InternalError"

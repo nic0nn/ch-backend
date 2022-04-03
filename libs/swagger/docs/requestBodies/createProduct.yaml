@@ -5,4 +5,4 @@ components:
       content:
         multipart/form-data:
           schema:
-            $ref: '#/components/schemas/Product'
+            $ref: "#/components/schemas/Product"

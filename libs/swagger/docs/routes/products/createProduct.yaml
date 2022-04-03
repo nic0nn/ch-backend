@@ -8,19 +8,19 @@ paths:
       tags:
         - Products
       requestBody:
-        $ref: '#/components/requestBodies/CreateProduct'
+        $ref: "#/components/requestBodies/CreateProduct"
       responses:
-        '201':
+        "201":
           description: Successful operation
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Product'
-        '400':
+                  $ref: "#/components/schemas/Product"
+        "400":
           description: Faltan datos requeridos
-        '403':
+        "403":
           description: No autorizado
           content:
             application/json:
@@ -35,13 +35,11 @@ paths:
                     type: string
                     description: Estado de la petición
                     example: error
-        '401':
+        "401":
           description: No autorizado
-        '500':
+        "500":
           description: Error interno
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/InternalError'
-        
-        
+                $ref: "#/components/schemas/InternalError"

@@ -1,1 +1,1 @@
-exports.options = require("./options")
+exports.options = require("./options");

@@ -47,11 +47,12 @@ components:
       example:
         userId: 5e9f8f8f9c8e8b3c8c8c8c8c
         total: 100
-        products: [
-          {
-            _id: 6243c59d38994fdd6cf5f522,
-            name: producto 1,
-            price: 100,
-            quantity: 1
-          }
-        ]
+        products:
+          [
+            {
+              _id: 6243c59d38994fdd6cf5f522,
+              name: producto 1,
+              price: 100,
+              quantity: 1
+            }
+          ]

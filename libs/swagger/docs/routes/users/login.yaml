@@ -6,9 +6,9 @@ paths:
       tags:
         - Users
       requestBody:
-        $ref: '#/components/requestBodies/Login'
+        $ref: "#/components/requestBodies/Login"
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -20,8 +20,8 @@ paths:
                     description: token de autorización
                     example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjQyNzc3Y2E0ZmU5ZWY1MmEwNWFiZGYiLCJ1c2VybmFtZSI6ImFkbWluIiwibmFtZSI6ImFkbWluIiwibGFzdG5hbWUiOiJhZG1pbiIsImVtYWlsIjoiYWRtaW5AZXhhbXBsZS5vcmciLCJwYXNzd29yZCI6IiQyYiQxMCRIeUtvSDFFVE9mR09MQWVIYmF4aXJPc3A4MVFneDRXMFhtZU9vRU5TM1pPSjdxVVdmOXZPRyIsInBob25lIjoiMTIzNDU2Nzg5MCIsInJvbGUiOiJhZG1pbiIsImNhcnQiOltdLCJjcmVhdGVkQXQiOiIyMDIyLTAzLTI5VDAzOjA1OjMyLjUzN1oiLCJ1cGRhdGVkQXQiOiIyMDIyLTAzLTI5VDAzOjA1OjMyLjUzN1oiLCJfX3YiOjAsImlhdCI6MTY0ODUzNDA2NH0.iL6Blc-o0YwH4Ga26nIXbV_Kvy6b5Tl2yZR26Gmdxwk
                   user:
-                    $ref: '#/components/schemas/User'
-        '401':
+                    $ref: "#/components/schemas/User"
+        "401":
           description: No autorizado
           content:
             application/json:
@@ -36,6 +36,3 @@ paths:
                     type: string
                     description: Mensaje de error
                     example: Usuario o contraseña inválidos
-               
-                  
-        

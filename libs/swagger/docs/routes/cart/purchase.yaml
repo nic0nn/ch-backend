@@ -1,12 +1,12 @@
 paths:
-  /orders:
+  /cart/purchase:
     post:
       summary: Genera una orden con los productos del carrito del usuario
       operationId: generateOrder
       security:
         - BearerAuth: []
       tags:
-        - Orders
+        - Cart
       responses:
         "200":
           description: Successful operation

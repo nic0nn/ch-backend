@@ -39,3 +39,17 @@ exports.deleteProduct = async (req, res, next) => {
 		next(error);
 	}
 };
+
+exports.generateOrder = async (req, res, next) => {
+	try {
+		const { user } = req;
+		const order = await CartServices.generateOrder(user._id);
+		res.json({
+			status: "ok",
+			message: `orden generada correctamente`,
+			data: order
+		});
+	} catch (error) {
+		next(error);
+	}
+};

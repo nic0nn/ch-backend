@@ -1,0 +1,71 @@
+#form {
+	display: none;
+}
+
+.container-fluid {
+	padding: 3em 0 1em;
+	max-width: 100vh;
+	height: 100vh;
+	font-family: "Nunito";
+}
+
+h1 {
+	font-weight: bold;
+}
+
+.header {
+	display: flex;
+	align-items: center;
+	margin-bottom: 1em;
+}
+
+#connect {
+	padding: 1em;
+}
+
+#welcome {
+	color: green;
+	font-weight: bold;
+}
+
+#error {
+	color: red;
+}
+
+#messages {
+	border: 1px solid #ccc;
+	border-radius: 8px;
+	height: 300px;
+	max-height: 300px;
+	overflow-y: auto;
+}
+
+.inputs {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	margin-top: 1em;
+}
+
+#send {
+	float: right;
+	width: 100px;
+	box-shadow: 2px 2px 2px #272727;
+}
+
+.divider {
+	height: 2px;
+	border: 1px solid #ccc;
+}
+
+.single-message {
+	padding: 1em;
+}
+
+.single-message .email {
+	font-weight: bold;
+}
+
+.single-message .text {
+	font-style: italic;
+}

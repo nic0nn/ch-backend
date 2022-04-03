@@ -1,6 +1,6 @@
 const { APIError } = require("../utils");
 const Product = require("../persistence").getDAO("products");
-const utils = require("../utils")
+const utils = require("../utils");
 exports.getAll = async () => {
 	const products = await Product.getAll();
 	return products;

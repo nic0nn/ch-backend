@@ -15,7 +15,7 @@ paths:
           schema:
             type: string
       responses:
-        '200':
+        "200":
           description: Successful operation
           content:
             application/json:
@@ -26,9 +26,9 @@ paths:
                     type: string
                     description: Mensaje informativo
                     example: producto 6243c59d38994fdd6cf5f522 eliminado
-        '401':
+        "401":
           description: No autorizado
-        '403':
+        "403":
         description: No autorizado
         content:
           application/json:
@@ -43,7 +43,7 @@ paths:
                   type: string
                   description: Estado de la petición
                   example: error
-        '404':
+        "404":
           description: Producto no encontrado
           content:
             application/json:
@@ -58,11 +58,9 @@ paths:
                     type: string
                     description: Estado de la petición
                     example: error
-        '500':
+        "500":
           description: Error interno
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/InternalError'
-        
-        
+                $ref: "#/components/schemas/InternalError"

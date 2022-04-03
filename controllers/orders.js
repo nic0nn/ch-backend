@@ -1,18 +1,5 @@
-const { OrderServices } = require("../services");
+const { OrderServices, EmailServices } = require("../services");
 
-exports.generateOrder = async (req, res, next) => {
-	try {
-		const { user } = req;
-		const order = await OrderServices.generateOrder(user._id);
-		res.json({
-			status: "ok",
-			message: `orden generada correctamente`,
-			data: order
-		});
-	} catch (error) {
-		next(error);
-	}
-};
 
 exports.getOrders = async (req, res, next) => {
 	try {

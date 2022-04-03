@@ -11,3 +11,6 @@ exports.MONGO_OPTIONS = {
 
 exports.JWT_SECRET = process.env.JWT_SECRET || "secret";
 exports.JWT_EXPIRES_IN = process.env.JWT_EXPIRES_IN || "1h";
+
+exports.GMAIL_ACCOUNT = process.env.GMAIL_ACCOUNT || "";
+exports.GMAIL_PASSWORD = process.env.GMAIL_PASSWORD || "";
