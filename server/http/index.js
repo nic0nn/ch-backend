@@ -52,11 +52,17 @@ app.get("/", (req, res) => {
 	res.render("index.hbs", {});
 });
 
-app.get("/configuration", (req, res) => {
+app.get("/configuracion", (req, res) => {
 	res.render("config.hbs", {
 		configuration: utils.Configuration.getSafeConfiguration({
 			...configuration
 		})
+	});
+});
+
+app.get("/chat", (req, res) => {
+	res.render("chat.hbs", {
+		header: '<script src="/socket.io/socket.io.js"></script>'
 	});
 });
 

@@ -1,3 +1,10 @@
+body {
+	font-family: "Nunito";
+}
+
+.container {
+	padding: 1em;
+}
 #form {
 	display: none;
 }
@@ -6,7 +13,6 @@
 	padding: 3em 0 1em;
 	max-width: 100vh;
 	height: 100vh;
-	font-family: "Nunito";
 }
 
 h1 {

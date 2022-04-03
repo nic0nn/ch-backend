@@ -60,7 +60,7 @@ components:
       example:
         username: n1c0nn
         password: 123456,
-        imageURL: uploads/15236544632.jpg
+        imageURL: images/15236544632.jpg
         name: Nicolas
         lastname: Bastias
         email: nikobastias@gmail.com
