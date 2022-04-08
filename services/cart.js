@@ -40,7 +40,7 @@ exports.addProducts = async (userId, products) => {
 
 	const newCart = await Cart.update(cartId, cart.products);
 
-	return newCart.products
+	return newCart.products;
 };
 
 exports.deleteProduct = async (userId, productId) => {

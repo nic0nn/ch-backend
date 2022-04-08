@@ -34,7 +34,7 @@ exports.register = (req, res, next) => {
 					lastname,
 					imageURL: file?.path.replace("public", "")
 				});
-				
+
 				const token = jwt.sign(userData, JWT_SECRET, {
 					expiresIn: JWT_EXPIRES_IN
 				});

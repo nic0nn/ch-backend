@@ -30,7 +30,7 @@ const schema = new Moongose.Schema({
 		default: "user"
 	},
 	cartId: {
-		type: mongoose.Types.ObjectId ,
+		type: mongoose.Types.ObjectId
 	},
 	createdAt: {
 		type: Date,

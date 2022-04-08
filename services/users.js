@@ -34,7 +34,7 @@ exports.register = async (userId, data) => {
 	}
 
 	const existingUser = await Users.findByEmail({ email: data.email });
-	
+
 	if (existingUser) {
 		throw new APIError(409, "email ya registrado");
 	}

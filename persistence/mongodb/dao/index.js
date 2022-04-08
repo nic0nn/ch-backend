@@ -14,12 +14,11 @@ const getDAO = (type) => {
 			return User;
 		case "chat":
 			return Chat;
-			case "cart":
-				return Cart;
+		case "cart":
+			return Cart;
 		default:
 			return {};
 	}
 };
-
 
 module.exports = getDAO;

@@ -45,7 +45,7 @@ passport.use(
 		},
 		async (username, password, done) => {
 			try {
-				const user = await UserServices.getUser(username)
+				const user = await UserServices.getUser(username);
 				if (user) return done(new APIError(400, "el usuario ya existe"), false);
 				const hash = bcrypt.hashSync(password, 10);
 				const newUser = await User.create({ username, password: hash });

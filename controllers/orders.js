@@ -1,6 +1,5 @@
 const { OrderServices, EmailServices } = require("../services");
 
-
 exports.getOrders = async (req, res, next) => {
 	try {
 		const { user } = req;
