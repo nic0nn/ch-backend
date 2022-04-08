@@ -57,17 +57,24 @@ exports.generateOrder = async (userId) => {
 	const admin = await Users.findOne({ role: "admin" });
 	await Cart.update(cart._id, []);
 
-	EmailServices.send({
-		to: admin.email,
-		subject: "Nueva orden",
-		text: `El usuario ${user.name} ha realizado una nueva orden`
-	});
+	sendOrderToUser(user, order);
+	sendOrderToAdmin(admin, order);
 
+	return newOrder;
+};
+
+sendOrderToUser = (user, order) => {
 	EmailServices.send({
 		to: user.email,
 		subject: "Orden generada",
 		text: `Su orden ha sido generada correctamente`
 	});
+};
 
-	return newOrder;
+sendOrderToAdmin = (admin, order) => {
+	EmailServices.send({
+		to: admin.email,
+		subject: "Nueva orden",
+		text: `El usuario ${user.name} ha realizado una nueva orden`
+	});
 };

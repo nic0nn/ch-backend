@@ -33,6 +33,12 @@ exports.register = async (userId, data) => {
 		throw new APIError(404, "usuario no encontrado");
 	}
 
+	const existingUser = await Users.findByEmail({ email: data.email });
+	
+	if (existingUser) {
+		throw new APIError(409, "email ya registrado");
+	}
+
 	const { email, phone, name, lastname, imageURL } = data;
 
 	const userData = {

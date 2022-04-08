@@ -14,6 +14,9 @@ const DAO = {
 	findById: async (id) => {
 		return await User.findById(id).lean();
 	},
+	findByEmail: async (email) => {
+		return await User.findOne({ email }).lean();
+	},
 	getAdmin: async () => {
 		return await User.findOne({ role: "admin" });
 	},
