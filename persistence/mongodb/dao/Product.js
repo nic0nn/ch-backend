@@ -15,8 +15,8 @@ const DAO = {
 	create: async (product) => {
 		return await Product.create(product);
 	},
-	update: async (id, product) => {
-		return await Product.findByIdAndUpdate(id, product, { new: true });
+	update: async (id, products) => {
+		return await Product.findByIdAndUpdate(id, products, { new: true });
 	},
 	delete: async (id) => {
 		return await Product.findByIdAndDelete(id);

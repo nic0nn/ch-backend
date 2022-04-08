@@ -35,9 +35,12 @@ components:
           type: string
           description: fecha de actualización del producto
       example:
+        _id: 5f0d8f9f9c9d440000c8f8f6
         name: Producto 1
         price: 100
         description: Descripción del producto 1
         image: https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png
         stock: 10
         code: 123456789
+        createdAt: 2020-05-05T19:51:00.000Z
+        updatedAt: 2020-05-05T19:51:00.000Z

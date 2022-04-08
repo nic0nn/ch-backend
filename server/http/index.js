@@ -16,7 +16,7 @@ const swaggerUi = require("swagger-ui-express");
 const swaggerOptions = require("../../libs/swagger/options");
 const swaggerSpecs = swaggerJsDoc(swaggerOptions);
 
-const { UsersServices } = require("../../services");
+const { UserServices } = require("../../services");
 
 const app = express();
 
@@ -74,7 +74,7 @@ const httpServer = http.createServer(app);
 
 const start = async () => {
 	await persistence.connect();
-	await UsersServices.createAdmin();
+	await UserServices.createAdmin();
 	httpServer.listen(configuration.PORT, () => {
 		utils.Logger.debug("Server started on port: " + configuration.PORT);
 	});

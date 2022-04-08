@@ -1,10 +1,8 @@
 const configuration = require("../configuration");
+const { DB_TYPE } = configuration;
 
-const { connect, getDAO } = require(`./${
-	configuration.DB_TYPE ? configuration.DB_TYPE : "mongodb"
-}`);
+const PersistenceFactory = require("./factory");
 
-module.exports = {
-	getDAO,
-	connect
-};
+const factory = new PersistenceFactory();
+
+module.exports = factory.create(DB_TYPE);

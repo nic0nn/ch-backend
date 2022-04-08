@@ -22,7 +22,7 @@ paths:
                   message:
                     type: string
                     description: Mensaje de respuesta
-                    example: ordenes obtenidas correctamente
+                    example: orden generada correctamente
                   data:
                     type: array
                     description: ordenes del usuario

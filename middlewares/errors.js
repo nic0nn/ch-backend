@@ -5,6 +5,7 @@ const errors = (error, req, res, next) => {
 
 	if (error.name === "CastError") {
 		res.status(400).send({ status: "error", message: "id inválido" });
+		return;
 	}
 	if (error instanceof APIError) {
 		const { statusCode, message } = error;

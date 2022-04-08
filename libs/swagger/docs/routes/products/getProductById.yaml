@@ -21,6 +21,21 @@ paths:
                 type: array
                 items:
                   $ref: "#/components/schemas/Product"
+        "400":
+          description: id invalido
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Mensaje de error
+                    example: id invalido
+                  status:
+                    type: string
+                    description: Estado de la petición
+                    example: error
         "404":
           description: Producto no encontrado
           content:

@@ -25,10 +25,25 @@ paths:
                 type: array
                 items:
                   $ref: "#/components/schemas/Product"
+        "400":
+          description: id invalido
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Mensaje de error
+                    example: id invalido
+                  status:
+                    type: string
+                    description: Estado de la petición
+                    example: error
         "401":
           description: No autorizado
         "403":
-          description: No autorizado
+          description: No tiene permisos para realizar esta acción
           content:
             application/json:
               schema:

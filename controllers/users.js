@@ -5,6 +5,7 @@ const path = require("path");
 const User = require("../persistence").getDAO("users");
 const { JWT_SECRET, JWT_EXPIRES_IN } = require("../configuration");
 const { APIError } = require("../utils");
+const { UserServices } = require("../services");
 
 exports.login = (req, res, next) => {
 	try {
@@ -26,13 +27,14 @@ exports.register = (req, res, next) => {
 			const { email, phone, name, lastname } = req.body;
 			const { file } = req;
 			try {
-				const userData = await User.update(user._id, {
+				const userData = await UserServices.register(user._id, {
 					email,
 					phone,
 					name,
 					lastname,
 					imageURL: file?.path.replace("public", "")
 				});
+				
 				const token = jwt.sign(userData, JWT_SECRET, {
 					expiresIn: JWT_EXPIRES_IN
 				});

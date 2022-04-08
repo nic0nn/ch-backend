@@ -1,4 +1,4 @@
-const { CartServices } = require("../services");
+const { CartServices, OrderServices } = require("../services");
 
 exports.getProducts = async (req, res, next) => {
 	try {
@@ -14,7 +14,7 @@ exports.addProducts = async (req, res, next) => {
 	try {
 		const { user } = req;
 		const { products } = req.body;
-		const { cart } = await CartServices.addProducts(user._id, products);
+		const cart = await CartServices.addProducts(user._id, products);
 		res.json({
 			status: "ok",
 			message: `productos agregado correctamente`,
@@ -29,7 +29,7 @@ exports.deleteProduct = async (req, res, next) => {
 	try {
 		const { user } = req;
 		const { productId } = req.params;
-		const { cart } = await CartServices.deleteProduct(user._id, productId);
+		const cart = await CartServices.deleteProduct(user._id, productId);
 		res.json({
 			status: "ok",
 			message: `producto eliminado correctamente`,
@@ -43,7 +43,7 @@ exports.deleteProduct = async (req, res, next) => {
 exports.generateOrder = async (req, res, next) => {
 	try {
 		const { user } = req;
-		const order = await CartServices.generateOrder(user._id);
+		const order = await OrderServices.generateOrder(user._id);
 		res.json({
 			status: "ok",
 			message: `orden generada correctamente`,

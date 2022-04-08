@@ -9,6 +9,7 @@ const User = require("../../persistence").getDAO("users");
 
 const { JWT_SECRET } = require("../../configuration");
 const { APIError } = require("../../utils");
+const { UserServices } = require("../../services");
 
 passport.use(
 	"login",
@@ -21,7 +22,7 @@ passport.use(
 			try {
 				const error = new APIError(401, "usuario o contraseña inválidos");
 
-				const user = await User.findOne({ username });
+				const user = await UserServices.getUser(username);
 				if (!user) return done(error, false);
 
 				const result = bcrypt.compareSync(password, user?.password);
@@ -44,8 +45,7 @@ passport.use(
 		},
 		async (username, password, done) => {
 			try {
-				const user = await User.findOne({ username });
-
+				const user = await UserServices.getUser(username)
 				if (user) return done(new APIError(400, "el usuario ya existe"), false);
 				const hash = bcrypt.hashSync(password, 10);
 				const newUser = await User.create({ username, password: hash });

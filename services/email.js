@@ -1,5 +1,6 @@
 const nodemailer = require("nodemailer");
 const configuration = require("../configuration");
+const { Logger } = require("../utils");
 
 const { GMAIL_ACCOUNT, GMAIL_PASSWORD } = configuration;
 
@@ -20,9 +21,9 @@ exports.send = ({ to, subject, text }) => {
 
 	transporter.sendMail(options, function (error, info) {
 		if (error) {
-			console.log(error);
+			Logger.error(error);
 		} else {
-			console.log("Email sent: " + info.response);
+			Logger.info("Email sent: " + info.response);
 		}
 	});
 };

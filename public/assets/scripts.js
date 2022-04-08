@@ -59,7 +59,6 @@ const connectToChat = () => {
 	try {
 		getSocket();
 	} catch (error) {
-		console.log("error: ", error);
 		document.getElementById("error").innerHTML = "Error al conectarse";
 	}
 };

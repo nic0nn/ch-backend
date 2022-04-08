@@ -2,6 +2,7 @@ const Order = require("./Order");
 const Product = require("./Product");
 const User = require("./User");
 const Chat = require("./Chat");
+const Cart = require("./Cart");
 
 const getDAO = (type) => {
 	switch (type) {
@@ -13,9 +14,12 @@ const getDAO = (type) => {
 			return User;
 		case "chat":
 			return Chat;
+			case "cart":
+				return Cart;
 		default:
 			return {};
 	}
 };
+
 
 module.exports = getDAO;

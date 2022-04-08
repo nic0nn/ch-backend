@@ -1,3 +1,4 @@
+const { default: mongoose } = require("mongoose");
 const Moongose = require("mongoose");
 
 const schema = new Moongose.Schema({
@@ -28,9 +29,8 @@ const schema = new Moongose.Schema({
 		type: String,
 		default: "user"
 	},
-	cart: {
-		type: Array,
-		default: []
+	cartId: {
+		type: mongoose.Types.ObjectId ,
 	},
 	createdAt: {
 		type: Date,

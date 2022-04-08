@@ -3,7 +3,6 @@ const mongoose = require("mongoose");
 const configuration = require("../../configuration");
 const utils = require("../../utils");
 
-exports.getDAO = require("./dao");
 
 exports.connect = () => {
 	mongoose
@@ -18,3 +17,6 @@ exports.connect = () => {
 			utils.Logger.error("Error connecting to MongoDB: ", err);
 		});
 };
+
+exports.getDAO = require("./dao");
+exports.name = "mongodb";

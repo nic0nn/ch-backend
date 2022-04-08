@@ -5,4 +5,32 @@ components:
       content:
         multipart/form-data:
           schema:
-            $ref: "#/components/schemas/Product"
+            type: object
+            required:
+              - name
+              - price
+              - stock
+            properties:
+              name:
+                type: string
+                description: "Nombre del producto"
+                example: "Producto 1"
+              price:
+                type: number
+                description: "Precio del producto"
+                example: 100
+              description:
+                type: string
+                description: "Descripción del producto"
+                example: "Descripción del producto 1"
+              image:
+                type: file
+                description: "Imagen del producto"
+              stock:
+                type: number
+                description: "Stock del producto"
+                example: 100
+              code:
+                type: string
+                description: "Código del producto"
+                example: "COD-001"

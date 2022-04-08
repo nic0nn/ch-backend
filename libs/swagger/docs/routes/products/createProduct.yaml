@@ -21,7 +21,7 @@ paths:
         "400":
           description: Faltan datos requeridos
         "403":
-          description: No autorizado
+          description: No tiene permisos para realizar esta acción
           content:
             application/json:
               schema:

@@ -38,6 +38,21 @@ paths:
                           type: integer
                           description: cantidad de productos
                           example: 1
+        "400":
+          description: No hay productos para agregar
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    description: Mensaje de error
+                    example: no hay productos para agregar
+                  status:
+                    type: string
+                    description: Estado de la petición
+                    example: error
         "401":
           description: Error de autenticación
         "404":
